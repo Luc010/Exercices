@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+    font-size: 12px;
+    font-family: 'Oswald',corbel,calibri,sans-serif;
+}
+h1{
+    background-color: black;
+    color: #eee;
+    text-indent: 10px;
+}
+h2{
+    color: grey;
+    border-bottom: 1px solid black;
+}
+p{
+    /* Pourcentage plus simple à gérer, interligne (utilité: bcp de text) */
+    line-height:200%;
+}
+img{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: silver;
+}
+nav {
+    width: 200px;
+    padding-top: 40px;
+    background : url(img/img.jpg) no-repeat;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: url(img/icone.png) no-repeat;
+}
+ul {
+    width: 160px;
+    margin-left: 20px;
+}
+li {
+    margin-bottom: 2px;
+    height: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+a {
+    color: black;
+    background : url(img/img2.jpg);
+    text-decoration: none;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+}
+a:hover {
+    background-image:url(img/img3.jpg);
+    color: white;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: azure;
+        }
+        form{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Les formulaires</h1>
+    <form action="" method="POST">
+        <h2>Champ d'insertion</h2>
+        <p>Votre nom : <input type="text" name="" value=""></p>
+        <h2>Champ de texte</h2>
+        <p>Votre commentaire :</p>
+        <textarea></textarea>
+        <h2>Case à cocher</h2>
+        <p>Quels sont vos loisirs?
+            <input type="checkbox" value="jardinage">jardinage
+            <input type="checkbox" value="cuisine">cuisine
+            <input type="checkbox" value="sport">sport
+            <input type="checkbox" value="dessin">dessin
+        </p>
+        <h2>Boutons de type radio</h2>
+        <p>Êtes vous adhérent?
+            <input type="radio" name="" value="1">Oui
+            <input type="radio" value="0">Non
+        </p>
+        <h2>Les listes déroulantes</h2>
+        <p>Dans quels départements habitez-vous?
+            <select name="departement" id="">
+                <option value="0" selected disabled hidden>Choisissez parmis la liste suivante</option>
+                <option value="80">80</option>
+                <option value="95">95</option>
+                <option value="02">02</option>
+                <option value="13">13</option>
+            </select>
+        </p>
+        <input type="submit" value="valider"><!--<input type="reset" value="reset"> -->
+    </form>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bonnes pratiques et méthodes</title>
+
+    <style>
+        body {
+
+            margin: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            background-color: #fff;
+            color: darkred;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        /* Deux syntaxes: */
+
+        /* La première(la meilleure): */
+        article p {
+            color: darkorchid;
+        }
+
+        /* La cascade(la deuxième syntaxe); À partir de trois niveaux, le code n'est pas optimisé: */
+        .container main .col2 article p {
+            color: darkorange;
+        }
+
+
+        /* Méthode création de class: */
+
+        /* Méthode OOCSS("on crée plein de class"): */
+        .h1 {
+            background-color: darkturquoise;
+        }
+
+        /* L'autre méthode(déconseillé): */
+        article h1 {
+            background-color: darkturquoise;
+        }
+
+        .box {
+            width: 200px;
+            min-height: 200px;
+            border: 1px solid darkcyan;
+            margin: 40px;
+        }
+
+        /* box h2 */
+        /* .box__h2? */
+    </style>
+
+</head>
+
+<body>
+
+
+
+
+    <!-- .container>header+main>aside.col1+col2+aside^footer -->
+    <div class="container">
+        <header></header>
+        <main>
+            <aside class="col1"></aside>
+            <div class="col2">
+                <article class="article">
+                    <h1 class="h1">Titre h1</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi minus facilis nihil nisi quaerat
+                        consectetur distinctio eaque dolores exercitationem unde.</p>
+                </article>
+
+
+            </div>
+            <aside class="col3">
+                <h2 class="box-h2">Titre de ma boîte</h2>
+
+                /* Méthode BEM; https://www.alticreation.com/bem-pour-le-css/
+                <h2 class="box__title">Titre de ma boîte</h2> */
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eligendi.</p>
+    </div>
+
+    </aside>
+    </main>
+    <footer></footer>
+    </div>
+</body>
+
+</html>

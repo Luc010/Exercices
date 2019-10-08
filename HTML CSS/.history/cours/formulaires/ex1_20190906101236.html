@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        form{
+            border: 1px solid black;
+            min-height: 400px;
+            width: 600px;
+            background-color: #eee;
+            padding: 20px;
+        }
+        input{
+            border: none;
+            border-bottom: 1px dashed grey;
+        }
+        input.btn{
+     
+        }
+        .submit{
+            line-height: 40px;
+            background-color: black;
+            color: white;
+            border: none;
+            text-align: center;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="" method="POST">
+        <label>Identifiant</label>
+        <input class="btn" type="text" name="identifiant" placeholder="Votre identifiant"><br>
+        <label>Mot de passe</label>
+        <input class="btn" type="password" name="password" placeholder="Votre mot de passe"><br>
+        <input type="submit" class="submit" name="submit" value="Envoyer">
+    </form>
+</body>
+</html>

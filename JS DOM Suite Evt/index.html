@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Exercices</title>
+    <style>
+        .blinking{
+            animation:blinkingText 3s infinite;
+        }
+        @keyframes blinkingText{
+            0%{     color: #000;    }
+            49%{    color: transparent; }
+            50%{    color: transparent; }
+            99%{    color:transparent;  }
+            100%{   color: #eee;    }
+        }
+    </style>
+</head>
+<body onload="popup()">
+    <div class="container-fluid m-0 p-0">
+        <h1 class="bg-dark text-white pl-2">Exercices JS </h1>
+        <div class="row mx-auto">
+            <div class="col-6 p-4">
+                <h2>Exercice 1</h2>
+                <p>Afficher une page html qui affiche une image1.
+                    A l'approche de la souris sur l'image et l'image 2 s'affiche.
+                </p>
+                <img onmouseover="img2(this)" onmouseout="img(this)" src="img/img2.png" alt="garfield" width="200" height="150">
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 2</h2>
+                <p>Au chargement de votre page html lancer un popup de bienvenue sur votre site.</p>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 3</h2>
+                <p>Sur un popup Afficher un bouton fermer. En double cliquant sur ce bouton la popu disparait.</p>
+                <button class="btn-lg btn-dark" ondblclick="closePop()">Fermer la popup</button>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 4</h2>
+                <p>
+                    Créer une page html5 contenant une image.
+                    Programmer en JavaScript une alternance entre cette image et une autre, toutes les deux secondes.
+                    Ajouter un bouton et le code JavaScript associé pour arrêter ce défilement.
+                    Ajouter un bouton et le code JavaScript associé pour le reprendre.
+                </p>
+                <object data="diapo.html" style="width:100%;height:300px;"></object>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 5</h2>
+                <p>Ecrire un script qui permet de rechercher la page </p>
+                <button class="btn-lg btn-dark mb-2" onclick="refresh()">Reload</button>
+                <object id="site" type="text/html" data="https://www.journaldugeek.com" style="width:100%;height:500px;"></object>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 6</h2>
+                <p>Ecrire du code js/css/html qui fait clignoter du texte</p>
+                <h3>CSS</h3>
+                <span class="blinking">Am I blinking?</span>
+                <h3>JS</h3>
+                <span class="cursor" onmouseover="blink()">May be...</span>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 7</h2>
+                <p>Empecher l'exécution du bouton droit de la souris</p>
+                <button class="btn-dark btn-lg " onclick="disableRclick()">Désactiver click droit</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

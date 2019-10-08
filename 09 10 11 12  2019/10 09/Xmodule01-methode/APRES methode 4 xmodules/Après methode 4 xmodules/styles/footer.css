@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    /* background: black url(images/m1.jpg) center top no-repeat; */
+    background-size: cover;
+}
+
+.container {
+    width: 960px;
+    background-color: grey;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    height: 442px;
+    background-color: orange;
+
+}
+
+main {
+    min-height: 350px;
+    background-color: blue;
+    display: flex;
+    flex-wrap: wrap
+}
+
+footer {
+    height: 30px;
+    background-color: green;
+    clear: left;
+}
+
+
+.col1 {
+    min-height: 400px;
+    background-color: red;
+    width: 200px;
+    float: left;
+
+}
+
+.col2 {
+    min-height: 400px;
+    background-color: white;
+    width: 500px;
+    float: left;
+}
+
+.col3 {
+    min-height: 400px;
+    background-color: brown;
+    width: 260px;
+    float: left;
+}

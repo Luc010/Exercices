@@ -1,0 +1,42 @@
+/* 
+3 methodes pour intégrer des CSS dans une page web
+1- l'attribut style
+2- la balise style
+3- la feuille de style externe (.css)
+
+3 principaux sélecteurs :
+1- le nom de la balise que l'on souhaite sélectionner
+2- la classe
+3- l'identifiant 
+
+On utilise un sélecteur exemple body ensuite à l'intérieur des accolades on retrouve la déclaration de nos propriétés, l'ensemble est appelé règle. 
+
+Toujours commencer par le body
+*/
+
+body {
+    background-color: #eee;
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    background-color: #000000;
+    color: #fff;
+    /* La propriété text-indent définit la longueur qui doit être laissée avant le début de la première ligne d'un élément contenant du texte. */
+    text-indent: 10px;
+}
+h2 {
+    /* Ne JAMAIS utiliser underline toujours utiliser cette propriété. */
+    border-bottom: 1px solid #22eeee;
+}
+td {
+    border: 1px solid black;
+    padding: 0;
+    /* Remplace le cellpadding*/
+}
+table {
+    border: 1px solid greenyellow;
+    border-spacing: 0;
+    /* Enlève les espaces entre les cellules, remplace le cellspacing. */
+    border-collapse: collapse;
+}

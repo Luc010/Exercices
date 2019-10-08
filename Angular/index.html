@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <title>Exercices</title>
+</head>
+
+<body>
+    <div class="container-fluid m-0 p-0">
+        <h1 class="bg-dark text-white pl-2">Exercices ANGULAR JS </h1>
+        <div class="row mx-auto">
+            <div class="col-6 p-4">
+                <h2>Exercice 1</h2>
+                <p>Créer une page html permettant de :<br>
+                    1- Initialisez dans un contrôleur les données suivantes :
+                </p>
+                <p ng-controller="myCtrl">{{ID()}}</p>
+                <script>
+                    var app = angular.module('myApp', []);
+                    app.controller('myCtrl', function ($scope) {
+                        $scope.firstName = "Jean";
+                        $scope.lastName = "Dupont";
+                        $scope.birthD = "30/06/2006";
+                        $scope.ID = function () {
+                            return $scope.firstName + " " + $scope.lastName + " " + $scope.birthD
+                        }
+                    });
+                </script>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 2</h2>
+                <p>Dans le fichier html , afficher la variable firstName dans la div.</p>
+                <script>
+                    app.controller('studentsCtrl', function ($scope) {
+                        $scope.firstName2 = 'Émilie';
+                        $scope.lastName2 = 'Gérard';
+                        $scope.age = '17';
+                        $scope.grade = 'Terminale';
+                    });
+                </script>
+                <div ng-controller="studentsCtrl">{{firstName2}}</div>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 3</h2>
+                <p>Le fichier html et le script.js est le même que l'exercice2 dans le fichier html fourni, afficher
+                    toutes les variables.</p>
+                <p ng-controller="studentsCtrl">{{firstName2 + " " + lastName2 + " " + age + " ans, classe: " + grade}}
+                </p>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 4</h2>
+                <p>
+                    Dans le fichier html fourni ci dessus,
+                    placer ng-app pour qu'AngularJS fonctionne dans tout le document.
+                </p>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 5</h2>
+                <p>Dans le fichier html fourni ci dessous , placer ng-app pour qu'AngularJS fonctionne uniquement dans
+                    la div sum.</p>
+                <div class="sum">
+                    220 + 304 = {{220+304}}
+                </div>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 6</h2>
+                <p>Dans le fichier html fourni, placer ng-app pour que seules les deux dernières expressions soient
+                    interprétées. (Modification du html autorisée).</p>
+                <div class="sum">
+                    <div>
+                        220 + 304 = {{220+304}}
+                    </div>
+                    <div>
+                        220 - 304 = {{220-304}}
+                    </div>
+                    <div>
+                        220 * 304 = {{220 * 304}}
+                    </div>
+                    <div>
+                        220/304 = {{220 / 304}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 p-4">
+            <h2>Exercice 8</h2>
+            <p>Soit deux entiers</p>
+            <div class="sum">
+                220 + 304 = {{220+304}}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <script src="../lib/jquery.js"></script>
+    <title>Exercices</title>
+</head>
+
+<body>
+    <div class="container-fluid m-0 p-0">
+        <h1 class="bg-dark text-white p-5">Exercices jQuery</h1>
+        <div class="row mx-auto">
+            <div class="col-6 p-4">
+                <h2>Exercice 1</h2>
+                <p> 1- Récupèrer la police et l'affiche<br>
+                    2- Cliquer sur un bouton pour changer le police de la page.<br>
+                    3- Lors d'un clic sur le bouton " changer de police" changer la police de la page<br>
+                    4- Toggle la classe et accroche des styles à chaque classe.
+                </p>
+                <script>
+                    $(function () {
+                        var police = $('#police').css('font-family');
+                        $('#police').html(police);
+                        $('#b1').on('click', function () {
+                            $('body').css('font-family', 'Roboto');
+                        });
+                        $('#b2').on('click', function () {
+                            $('body').css('font-family', 'Arial');
+                        });
+                    });
+                </script>
+                <div class="light">
+                    <button id="b1">Changer le thème</button>
+                    <button id="b2">Changer la police</button>
+                    <p>Famille de polices actuellement utilisée : <span id="police"></span></p>
+                </div>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 2</h2>
+                <p>Ecrire un script jquery qui permet de donner la position de cette div</p>
+                <div
+                    style="height:75px;width:200px;padding:10px;margin:3px;border:1px solid blue;background-color:#F3E2A9;">
+                </div>
+                <p id="pos"></p>
+                <script>
+                    $(function () {
+                        var p = $('#pos').position();
+                        $('#pos').html('<strong>POSITION :</strong> <br> TOP: ' + p.top + '<br>' + 'LEFT: ' + p.left);
+                    });
+                </script>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 3</h2>
+                <p>
+                </p>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 4</h2>
+                <p></p>
+                <script>
+                    $(function () {
+                        var width = $('body').css('width');
+                        var rWidth = $('body').width();
+                        $('#rescss').html('<strong>' + width + '</strong>');
+                        $('#reswidth').html('<strong>' + rWidth + '</strong>');
+                    });
+                </script>
+                <div>
+                    <p>Un premier paragraphe</p>
+                    <p>Un deuxième paragraphe</p>
+                </div>
+                <p id="p3">Troisième paragraphe hors div</p>
+                <p>Largeur avec css() : <span id="rescss"></span></p>
+                <p>Largeur avec width() : <span id="reswidth"></span></p>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 5</h2>
+                <p>1-Effectuer une copie profonde de notre conteneur<br>
+                    2-Placer cette copie dans le document (en fin de l'élément body)
+                </p>
+                <script>
+                    $(function () {
+                        $('#button').on('click', function () {
+                            $('.container').clone().appendTo('body');
+                        });
+                    });
+                </script>
+                <div class="container">
+                    <p id="p1">Un paragraphe écrit en HTML</p>
+                    <p id="p2">Un autre paragraphe</p>
+                </div>
+                <p>Un paragraphe en dehors du div</p>
+                <button type="button" class="btn btn-dark" id="button">Clone this</button>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 6</h2>
+                <p> 1- Supprimer le paragraphe avec l'id="p1"<br>
+                    2- Supprimer le contenu de #p2<br>
+                    3- Supprimer le parent des paragraphes si c'est un élément section<br>
+                    4- Supprimer h1 et conserver ses données.
+                </p>
+                <script>
+                    $(function () {
+                        $('.p1').remove();
+                        $('.p2').empty();
+                        $('p').parent('.elmt').remove();
+                        $('.h1').detach();
+                    });
+                </script>
+                <h1 class="h1">Cours jQuery</h1>
+                <div class="container">
+                    <p class="p1">Un paragraphe écrit en HTML</p>
+                    <p class="p2">Un autre paragraphe</p>
+                </div>
+                <section class="elmt">
+                    <p>Un paragraphe en dehors du div</p>
+                </section>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 7</h2>
+                <p> 1- Remplacer les éléments section et ce qu'ils contiennent par...<br>
+                    2- Remplacer #p1 par...
+                </p>
+                <script>
+                    $(function () {
+                        $('.section p').replaceWith('<div class="font-weight-bold">Ceci était une balise section</div>');
+                        $('#p01').replaceWith('<p class="font-weight-bold">Contenu modifié</p>');
+                    });
+                </script>
+                <div class="container">
+                    <p id="p01">Un paragraphe écrit en HTML</p>
+                    <p id="p2">Un autre paragraphe</p>
+                </div>
+                <section class="section">
+                    <p>Un paragraphe en dehors du div</p>
+                </section>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 8</h2>
+                <p> 1- Lors d'un clic sur le div on cache le texte<br>
+                    2- Les éléments avec .afficher seront visibles<br>
+                    3- Les éléments avec .cacher seront cachés
+                </p>
+                <script>
+                    $(function () {
+                        $('.cacher').css('display', 'none');
+                        $('div .hide').on('click', function () {
+                            $('.hide').children().not('.afficher').hide();
+                        });
+                    });
+                </script>
+                <div class="hide">
+                    <h2>Les événéments liés à la souris</h2>
+                    <p class="afficher">
+                        Dans cette leçon, nous allons découvrir les méthodes
+                        jQuery nous permettant de gérer les événementsles plus communs liés à la
+                        souris (clic, passage de la souris sur un élément, etc.).
+                    </p>
+                    <p class="cacher">Hello</p>
+                </div>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 9</h2>
+                <p>Attach a click and double-click event to the  &ltp&gt element.<br>
+                    Go to the editor
+                    Sample Data :
+                </p>
+                <script>
+                    $(function(){
+                        $('#toggle').on('click', function(){
+                            $('#toggle').html('<p>Voici un evenement click </p>');
+                        });
+                        $('#toggle2').on('dblclick', function(){
+                            $('#toggle2').html('<p>Voici un evenement double clic</p>');
+                        });
+                    });
+                </script>
+                <p id="toggle">Click me!</p>
+                <p id="toggle2">Click me!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+polacode capture écran
+bracket pair colorizer
+open in browser	Shift Alt B (version 03 2?)
+Pretty Formatter (Pretty code Formatter?)
+
+

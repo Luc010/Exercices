@@ -1,0 +1,45 @@
+
+		.container {
+			width: 960px;
+			background-color: grey;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		header {
+			height: 442px;
+			background-color: orange;
+
+		}
+
+		main {
+			min-height: 350px;
+			background-color: blue;
+			display: flex;
+			flex-wrap: wrap
+		}
+
+		footer {
+			height: 30px;
+			background-color: green;
+		}
+
+
+		.col1 {
+			min-height: 400px;
+			background-color: red;
+			width: 200px;
+
+		}
+
+		.col2 {
+			min-height: 400px;
+			background-color: white;
+			width: 500px;
+		}
+
+		.col3 {
+			min-height: 400px;
+			background-color: brown;
+			width: 260px;
+		}

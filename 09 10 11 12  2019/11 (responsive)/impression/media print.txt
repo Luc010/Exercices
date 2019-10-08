@@ -1,0 +1,15 @@
+ @page {
+                size: 21.0cm 29.7cm;
+                margin-top: 2.1cm;
+                ;
+                margin-bottom: 1.9cm;
+                ;
+                margin-left: 2cm;
+                margin-right: 2cm;
+            }
+
+@media print {
+            .sautdepage{
+                page-break-before: always;
+            }
+}

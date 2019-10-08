@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Les sélecteurs avancés</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        h1 {}
+
+        h2 {}
+
+        .container {}
+
+        #header {}
+
+        li:first-child {
+            /* background-color: red; */
+        }
+
+        li:last-of-type {
+            /* background-color: darkred; */
+        }
+
+        /* li:nth-child(even) {
+            background-color: darkblue;
+            border: 1px solid darkgreen;
+        } */
+
+        li:nth-child(4n) {
+            /* background-color: darkblue;
+            border: 1px solid darkgreen; */
+        }
+
+        p::first-letter {
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: darkmagenta;
+        }
+
+        /* Le premier p qui suit obligatoirement un h1; il faut qu'il y ait un h1 avant; s'il y a des p avant, ils ne seront pas pris en compte */
+        h1+p {
+            margin-top: 5px;
+            background-color: darkseagreen;
+        }
+
+        /* TILDE: Tous les p; à condition qu'ils suivent un h2 */
+        h2~p {
+            background-color: darkslateblue;
+        }
+
+        /* Toutes les images qui se terminent par.jpg  */
+        img[src$=".jpg"] {
+            border-radius: 7px;
+            border: 1px solid #000;
+        }
+
+        [class$=".jpg"] {
+            border-radius: 7px;
+            border: 1px solid #000;
+        }
+
+        /* https://la-cascade.io/les-pseudo-elements-css-before-et-after/ */
+        h1:before {
+            content: "Mon titre H1: ";
+        }
+
+        h1:after {
+            content: "-->testafter";
+        }
+
+        /* li{background: transparent url() left top  no-repeat;}
+        li{background: transparent url() 10px top  no-repeat ;} */
+
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        li {
+            /* background: transparent url(darkred.png) 10px 14px no-repeat; */
+            height: 50px;
+            background: white url(darkred.png) 10px 14px no-repeat;
+            display: flex;
+            align-items: center;
+            text-indent: 80px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Les sélecteurs avancés</h1>
+
+    <h2>Les pseudo classes</h2>
+    <p>Ils commencent par ":" <br>
+        a:hover</p>
+    <!-- div:first-of-type   div:last-of-type 
+    li:first-child  li:last-child
+        :nth-child(even)
+        :nth-child(odd)
+-->
+
+    <!-- ul>li*5>a{lien $} -->
+    <ul>
+        <li><a href="">lien 1</a></li>
+        <li><a href="">lien 2</a></li>
+        <li><a href="">lien 3</a></li>
+        <li><a href="">lien 4</a></li>
+        <li><a href="">lien 5</a></li>
+        <li><a href="">lien 3</a></li>
+        <li><a href="">lien 4</a></li>
+        <li><a href="">lien 5</a></li>
+        <li><a href="">lien 3</a></li>
+        <li><a href="">lien 4</a></li>
+        <li><a href="">lien 5</a></li>
+    </ul>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus reiciendis nesciunt deserunt. Consectetur sunt
+        quo laudantium voluptatum ipsam? Nesciunt atque rem voluptate deleniti perspiciatis eaque ipsa corrupti, cum
+        expedita quaerat?</p>
+
+    <h2>Les pseudo éléments</h2>
+    <!-- ::first-letter   -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit veniam, officiis quo aliquid saepe vitae
+        ratione
+        totam fugiat maiores dicta consectetur dolor incidunt ullam inventore quidem dolorum libero omnis
+        laudantium.
+    </p>
+
+    <h2>Les sélecteurs d'adjacence directe</h2>
+    <!-- + entre deux sélecteurs -->
+
+
+    <h2>Les sélecteurs d'attributs</h2>
+
+    <!-- Reconnaissable par des crochets
+        [attr^="stringValue"]
+        [attr$="stringValue"]
+        [attr*="stringValue"]
+        -->
+
+    <!-- ^: Il faut que le début de l'attribut commence par "es" -->
+    <!-- p[title^="essai"] -->
+    [title^="es"]
+
+    <!-- Il faut que "ss" soit contenu.. -->
+    p[title*="ss"]
+    <!-- Toutes les images qui se terminent par.jpg 
+        img[src$=".jpg"]{order-radius}
+        -->
+
+
+    p[title]
+    <p class="exemple">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, aut.</p>
+    <p class="exemple" title="comment">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, aut.</p>
+    <p class="exemple" title="essai">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, aut.</p>
+    <p class="exemple" title="esson">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, aut.</p>
+
+</body>
+
+</html>

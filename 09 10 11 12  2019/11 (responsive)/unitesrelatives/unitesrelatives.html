@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unités relatives</title>
+
+
+    <style>
+        html {
+            font-size: 62.5%;
+            /* 16px */
+
+
+        }
+
+        body {
+            margin: 0;
+            background-color: darkred;
+            /* 1 rem=10px */
+            /* font-size: 12px; */
+            font-size: 1.2rem;
+        }
+
+        .container {
+            width: 700px;
+            min-height: 400px;
+            background-color: #fff;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            font-size: 14px;
+        }
+
+        h1 {
+            /* font-size: 22px; */
+            font-size: 2.2rem;
+            border-bottom: 1rem solid darkblue;
+            border-left: 2rem;
+            text-indent: 1.2rem;
+        }
+
+        img,
+        video {
+            min-width: 100%;
+            height: auto;
+        }
+
+        /* Pour smartphone */
+        @media screen and (min-width:575.98px) {
+            entete {
+                background: darkred url(images/enteteSMARTHPHONE.jpg) left top no-repeat;
+            }
+        }
+
+
+        /* Pour écrans */
+        @media screen and (min-width: 992px) {
+            entete {
+                background: darkred url(images/enteteECRAN.jpg) left top no-repeat;
+            }
+        }
+
+        article {
+            /* margin: 40px; */
+            margin: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- div.container -->
+    <div class="container">
+        <article>
+            <h1>Titre de ma page</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ipsa nulla delectus accusantium ut consequuntur excepturi modi ea praesentium suscipit rerum, nemo, ad autem eius odio, necessitatibus ipsum. Nihil, unde.</p>
+        </article>
+    </div>
+</body>
+
+</html>

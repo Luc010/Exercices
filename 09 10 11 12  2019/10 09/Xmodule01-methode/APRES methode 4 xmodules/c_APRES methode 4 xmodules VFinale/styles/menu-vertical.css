@@ -1,0 +1,62 @@
+nav.menu1{
+	width: 200px;
+	height: 230px;
+	background-color: white;
+	padding-top: 10px;
+}
+
+/* ul,
+li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+} */
+
+.menu1 ul{
+	width: 170px;
+	margin-left: 12px;
+
+}
+
+.menu1  ul li{
+	width: 170px;
+
+	height: 30px;
+	margin-bottom: 6px;
+	border: 1px solid black;
+
+}
+
+.menu1  ul li a{
+	color: white;
+	text-decoration:none ;
+	font-weight: bold;
+	font-size: 17px;
+	font-family: calibri,arial,sans-serif;
+	background-color: #00A3D9;
+	width: 170px;
+	text-indent: 30px;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	background: #00A3D9 url(../images/a.jpg) left top repeat-x;
+	letter-spacing: -1px;
+}
+.menu1 ul li a:hover{
+	background: blue url(../images/ahover.jpg) left top repeat-x;
+	color: black;
+}
+
+/* --------------------------
+.menu1 ul li:first-child{
+	margin-top: 20px;
+}
+
+.menu1 ul li:last-child{
+	border: 1px solid blue;
+}
+----------------------------
+*/
+	
+	

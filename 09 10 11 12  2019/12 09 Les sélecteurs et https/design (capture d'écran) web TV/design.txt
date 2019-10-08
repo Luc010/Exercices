@@ -1,0 +1,10 @@
+Le footer
+le header
+	Le menu de navigation
+	le logo
+
+La partie  principale:
+	la présentation des vidéos
+	la gestion des espaces
+
+Les couleurs

@@ -1,0 +1,17 @@
+body{
+	margin:0;
+	background: black url(../images/m1.jpg) center top no-repeat;
+    background-size: cover;
+
+}	
+
+article{
+    margin: 40px;
+}
+
+ul,
+li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}

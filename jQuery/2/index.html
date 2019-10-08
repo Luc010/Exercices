@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <script src="../lib/jquery.js"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
+    <title>Exercices</title>
+</head>
+
+<body>
+    <div class="container-fluid m-0 p-0">
+        <h1 class="bg-dark text-white p-5">Exercices jQuery</h1>
+        <div class="row mx-auto">
+            <div class="col-6 p-4">
+                <h2>Exercice 1</h2>
+                <p>On considère une page html qui contient deux paragraphes
+                    Ecrire un script jQuery qui cache l'affichage du paragraphe 2 en cliquant sur un bouton.
+                </p>
+                <script>
+                    $(function () {
+                        $('.hide').on('click', function () {
+                            $('#p2').hide();
+                        });
+                        $('.show').on('click', function () {
+                            $('#p2').show();
+                        });
+                    });
+                </script>
+                <p id="p1">Paragraphe 1</p>
+                <p id="p2">Paragraphe 2</p>
+                <button id="action" class="btn btn-dark hide">Cacher P2</button>
+                <button id="action" class="btn btn-dark show">Afficher P2</button>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 2</h2>
+                <p>Ecrire un code jquery qui permet de mettre :
+                    1- Le contenu du premier span en vert
+                    2- Contenu du deuxième span en bleu
+                    3- Le contenu du troisième span en orange
+                </p>
+                <script>
+                    $(function () {
+                        $('.color span').first().css('color', 'green');
+                        $('.color span').eq(1).css('color', 'blue');
+                        $('.color span').last().css('color', 'orange');
+                    });
+                </script>
+                <div class="color">
+                    <h1 class="souligne">Cours jQuery</h1>
+                    <p id="pg1">Un paragraphe <span class="souligne">écrit en HTML</span></p>
+                    <span>Un élément span non contenu dans un élément p</span>
+                    <p id="pg2">Un deuxième paragraphe</p>
+                    <p>Un <span class="souligne">troisième</span> paragraphe</p>
+                </div>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 3</h2>
+                <p>
+                    1- Cibler l'élément parent direct de chaque élément li et ajoute
+                    une bordure autour.<br>
+                    2- Cibler l'élément parent direct de chaque élément li uniquement si
+                    il possède un id="parents" et change la couleur de fond en bleu.
+                </p>
+                <script>
+                    $(function () {
+                        $('.border1 li').parent().css('border', '2px solid red');
+                        $('.border1 li').parent('#parents').css('border', '2px solid blue');
+                    });
+                </script>
+                <div class="container border1">
+                    <h1>Cours jQuery</h1>
+                    <div>
+                        <p>Un paragraphe HTML</p>
+                    </div>
+                    <div>
+                        <p>Quelques méthodes jQuery permettant de <span>remonter</span> le DOM :</p>
+                        <ul id="parents">
+                            <li>parent()</li>
+                            <li>parents()</li>
+                            <li>parentsUntil()</li>
+                            <li>closest()</li>
+                        </ul>
+                        <p>Quelques méthodes permettant de <span>descendre</span> le DOM :</p>
+                        <ul id="enfants">
+                            <li>children()</li>
+                            <li>find()</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 4</h2>
+                <p>
+                    1- Sélectionne tous les ancêtres des éléments ul et ajoute une bordure
+                    noire d'1px autour de chacun d'entre eux. <br>
+                    2- Ne cibler que les ancêtres des éléments ul qui sont des div et change
+                    leur couleur de fond en bleu.
+                </p>
+                <script>
+                    $(function () {
+                        $('.border2 ul').parents().css('border', '1px solid black');
+                        $('ul').parents('.border2 div').css('background-color', 'grey');
+                    });
+                </script>
+                <div class="container border2">
+                    <h1>Cours jQuery</h1>
+                    <div>
+                        <p>Un paragraphe HTML</p>
+                    </div>
+                    <div>
+                        <p>Méthodes jQuery permettant de <span>remonter</span> le DOM :</p>
+                        <ul id="parents">
+                            <li>parent()</li>
+                            <li>parents()</li>
+                            <li>parentsUntil()</li>
+                            <li>closest()</li>
+                        </ul>
+                        <p>Méthodes permettant de <span>descendre</span> le DOM :</p>
+                        <ul id="enfants">
+                            <li>children()</li>
+                            <li>find()</li>
+                        </ul>
+                    </div>
+                </div>
+                <footer>
+                    <ul>
+                        <li>Elément de pied de page n°1</li>
+                        <li>Elément de pied de page n°2</li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

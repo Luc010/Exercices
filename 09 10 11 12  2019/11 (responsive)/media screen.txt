@@ -1,0 +1,17 @@
+https://getbootstrap.com/docs/4.3/layout/overview/
+
+/* **************  POUR SMARTPHONE  ********************* */
+@media screen and (max-width:575.98px){
+
+}
+/* **************  POUR TABLETTE  ********************* */
+@media (min-width: 576px) and (max-width:991.98px){
+	
+}
+
+/* **************  POUR ECRAN  ********************* */
+@media screen and (min-width: 992px){
+
+}
+------------------------------------------------------
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: réinitialise la valeur de la taille de l'écran en cas de zoom

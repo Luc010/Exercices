@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Exercices</title>
+    <style>
+        .ex01 {
+            font: italic bold;
+            text-decoration-line: underline;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .show {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid m-0 p-0">
+        <h1 class="bg-dark text-white pl-2">Exercices JS </h1>
+        <div class="row mx-auto">
+            <div class="col-6 p-4">
+                <h2>Exercice 1</h2>
+                <p>Creer un tableau qui contient les noms suivants
+                    Albertine, Julie, Florence julienne,Lucie.
+                    Afficher sur une page html le contenu de ce tableau en gras en italics souligné.
+                </p>
+                <div class="flash"></div>
+                <button class="btn btn-secondary" onclick="ex01(this);">Cliquez ici</button>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 2</h2>
+                <p>Créer un tableau de taille 5.
+                    Inviter l'utilisateur à entrer 5 elements à partir de son clavier au hasard.
+                    Créer une page html qui contient :
+                    --> Un bouton "minimum" et une zone de texte resultat
+                    -->Un bouton "maximum"
+                    En cliquant sur le bouton minimum
+                    On affiche le minimum dans la zone de texte
+                    On cliquant sur max on affiche dans la zone de texte le max
+                </p>
+                <div class="flash"></div>
+                <button class="btn btn-secondary" onclick="ex02(this);">Cliquez ici</button>
+                <button class="btn btn-secondary hide" onclick="ex02_min(this);">min</button>
+                <button class="btn btn-secondary hide" onclick="ex02_max(this);">max</button>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 3</h2>
+                <p>Afficher le tableau de l'exercice 2 trié.</p>
+                <div class="flash"></div>
+                <button class="btn btn-secondary show" onclick="ex03(this);">Cliquez</button>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 4</h2>
+                <p>
+                    Soit le tableau : var fruits = ['BANANE', 'ANANAS'];
+                    <ol>
+                        <li>Afficher le tableau sur un page html</li>
+                        <li>Afficher la taille du tableau dans un label sur la page</li>
+                        <li>Afficher l'index de ' Banana"</li>
+                        <li>A partir d'une zone de texte ajouter une nouveau fruit au tableau ( ex: mangue) utilisation
+                            de la methode push</li>
+                        <li>Afficher le nouveau tableau en précisant pour chaque fruit son index ( utilsiation de
+                            foreach)</li>
+                        <li>Copiez le tableau fruits en fruits</li>
+                        <li>Affichez fruit</li>
+                    </ol>
+                </p>
+                <p id="ex04"></p>
+                <form action="">
+                    le tableau contient <span id="taille"></span><br/>
+                    la banana c'est la <span id="idbanana"></span>
+                    <p><input id="fruitos" type="text" name="fruitos">
+                    <input type="button" value="ajouter" onclick="ajoutfruit()"></p>
+                </form>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 5</h2>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

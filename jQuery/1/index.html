@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <title>Exercices</title>
+</head>
+
+<body>
+    <div class="container-fluid m-0 p-0">
+        <h1 class="bg-dark text-white p-5">Exercices jQuery</h1>
+        <div class="row mx-auto">
+            <div class="col-6 p-4">
+                <h2>Exercice 1</h2>
+                <script>
+                    $(function () {
+                        $('#pg').has('span').css('color', 'red');
+                        $('#pg2').has('span').css('color', 'green');
+                    });
+                </script>
+                <p id="pg">Un paragraphe <span>écrit en HTML</span></p>
+                <span>Un élément span non contenu dans un élément p</span>
+                <p id="pg2">Un deuxième paragraphe</p>
+                <p>Un <span>troisième</span> paragraphe</p>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 2</h2>
+                <script>
+                    $(function () {
+                        $('#msgid3').html('This is Hello World by JavaScript');
+                    });
+                </script>
+                <span id="msgid3"></span>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 3</h2>
+                <p>On considère une page html qui contient deux paragraphes
+                    Ecrire un script jQuery qui cache l'affichage du paragraphe 2
+                </p>
+                <script>
+                    $(function () {
+                        $('#p2').hide();
+                    });
+                </script>
+                <p id="p1">ici c'est p1</p>
+                <p id="p2">ici c'est p2</p>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 4</h2>
+                <p>En JQuery mettre le fond de cette page en rouge</p>
+                <script>
+                    $(function () {
+                        // $("p:contains('bg').hide();");
+                        $('#bg').css('background-color', 'red');
+                    });
+                </script>
+                <div id="bg">
+                    <h3>abc</h3>
+                    <div>
+                        <h3>div-1</h3>
+                        <h3>div-2</h3>
+                    </div>
+                    <h3>xyz</h3>
+                </div>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 5</h2>
+                <p>Trouver tous les éléments h1 qui sont les enfants d'un élément
+                    div et leur appliquer un arrière-plan de cette couleur (#0686c9)</p>
+                <script>
+                    $(function () {
+                        $('span').children('h1').css('background-color', '#0686c9');
+                    });
+                </script>
+                <div>
+                    <h1>abc</h1>
+                    <span>
+                        <h1>div-1</h1>
+                        <h1>div-2</h1>
+                    </span>
+                    <h1>xyz</h1>
+                </div>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 6</h2>
+                <p>Masquer tous les éléments d'entrée dans un formulaire</p>
+                <script>
+                    $(function () {
+                        $('form[name ="demo_form"]').children().hide();
+                    });
+                </script>
+                <form name='demo_form'>
+                    First name: <input type="text" name="fname"><br>
+                    Last name: <input type="text" name="lname"><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 7</h2>
+                <p> Rechercher la valeur de texte de balise d'option spécifique d'une option sélectionnée
+                    valeur attendu : Option-2
+                </p>
+                <script>
+                    $(function () {
+                        var result = $("#myselect").val();
+                        $("#result").html("<label>Value:</label> " + result);
+                    });
+                </script>
+                <select id="myselect">
+                    <option value="1">Option-1</option>
+                    <option value="2">Option-2</option>
+                    <option value="3">Option-3</option>
+                </select>
+                <div id="result" class="m-2 font-weight-bold"></div>
+            </div>
+            <div class="col-6 p-4">
+                <h2>Exercice 8</h2>
+                <p>Cochez/décochez une entrée de case à cocher ou un bouton radio?</p>
+                <script>
+                    $(function () {
+                        $('#cocher').on('click', function () {
+                            $('#checkbox').attr('checked', true);
+                        });
+                        $('#décocher').on('click', function () {
+                            $('#checkbox').attr('checked', false);
+                        });
+                    });
+                </script>
+                <input type="checkbox" id="checkbox" value="1">Cocher/Décocher<br>
+                <button class="btn btn-dark" id="cocher">Cocher</button>
+                <button class="btn btn-dark" id="décocher">Décocher</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

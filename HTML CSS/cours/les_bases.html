@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Première partie</title>
+    <link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Les listes</h1>
+    <h2>Voici mes fruits préférés :</h2>
+    <ul>
+        <li>Mûres</li>
+        <li>Framboises</li>
+        <li>Groseilles</li>
+        <li>Cerises</li>
+        <li>Bananes</li>
+    </ul>
+    <h2>Voici mes fruits préférés :</h2>
+    <ol>
+        <li>Mûres</li>
+        <li>Framboises</li>
+        <li>Groseilles</li>
+        <li>Cerises</li>
+        <li>Bananes</li>
+    </ol>
+    <h2>Tableau</h2>
+    <!-- table>tr*4>td*4 -->
+    <!-- 
+        Les marges:
+        cellpadding : margin à l'intérieur des cellules.
+        cellspacing : margin entre les cellules.
+
+        Fusion de cellules : 
+        colspan
+        Fusion de lignes : 
+        rowspan -> verticalement
+        Raccourcis : ctrl + fleche haut/bas -> sélectionner plusieurs lignes, acronymes bootstrap = emmet.
+    -->
+    <table>
+        <tr>
+            <td colspan="3">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td rowspan="2">6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+    </table>
+    <h3> Exercice :
+        Faire un tableau de 12 cell avec 3 lignes, une seule cellule pour la 1er ligne, une seule cellule pour la 3eme
+        ligne.
+    </h3>
+    <!-- table>tr*3>td*12{$} -->
+    <table cellpadding="20">
+        <tr>
+            <td colspan="12">1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td colspan="12">1</td>
+        </tr>
+    </table>
+</body>
+</html>

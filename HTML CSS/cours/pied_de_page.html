@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Footer</title>
+</head>
+<body>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            color: grey;
+            text-decoration: none;
+        }
+        a:hover{
+            color: white;
+        }
+        h2{
+            color: white;
+            text-transform: uppercase;
+        }
+        li{
+            list-style: none;
+            margin-bottom: 5px;
+        }
+        ul{
+            margin: 0;
+            padding: 0; 
+            width: 200px;
+            margin-left: 20px;
+            /* background-color: #ccc9dc; */
+        }
+        footer{
+            min-height: 250px;
+            background-color: black;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .container div{
+            width: 240px;
+            min-height: 250px;
+        }
+        /* .bloc{background-color: #0c1821;}
+        .bloc2{background-color: #1b2a41;}
+        .bloc3{background-color: #324a5f;}
+        .bloc4{background-color: #ccc9dc;} */
+    </style>
+    <footer>
+        <div class="container">
+            <div class="bloc">
+                <h2>Plan du site</h2>
+                <!-- ul>li*5>a{lien$} -->
+                <ul>
+                    <li><a href="">lien1</a></li>
+                    <li><a href="">lien2</a></li>
+                    <li><a href="">lien3</a></li>
+                    <li><a href="">lien4</a></li>
+                    <li><a href="">lien5</a></li>
+                </ul>
+            </div>
+            <div class="bloc2">
+                <h2>Les réseaux sociaux</h2>
+            </div>
+            <div class="bloc3">
+                <h2>Abonnez-vous</h2>
+            </div>
+            <div class="bloc4">
+                <h2>Divers</h2>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

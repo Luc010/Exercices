@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu vertical</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* !!! évite les débordements !!!!  */
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: silver;
+        }
+        nav {
+            width: 100%;
+            min-height: 40px;
+        }
+        ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            display: flex;
+            
+        }
+        li {
+            width: 100%;
+            margin-bottom: 2px;
+            height: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            height: 40px;
+            line-height: 40px;
+        }
+        a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="">lien</a></li>
+            <li><a href="">lien2</a></li>
+            <li><a href="">lien3</a></li>
+            <li><a href="">lien4</a></li>
+            <li><a href="">lien5</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

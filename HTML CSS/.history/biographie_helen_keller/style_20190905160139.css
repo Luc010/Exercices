@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+/* GENERAL */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+    font-size: 12px;
+    font-family: 'Oswald',corbel,calibri,sans-serif;
+}
+nav{
+    height: 46px;
+    display: flex;
+    flex-flow:;
+    background-color: aquamarine;
+}
+a{
+    text-decoration: none;
+}
+ul, li{
+    list-style: none;
+    align-items: center;
+}
+/* HEADER */
+
+header{
+    background-color: #f2f2f2;
+    height: 72px;
+}
+.brand{
+    text-indent: 10px;
+}
+

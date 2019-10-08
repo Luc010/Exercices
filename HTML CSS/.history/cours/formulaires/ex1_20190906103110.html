@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FORMULAIRES</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: gainsboro;
+        }
+
+        form {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            border: 1px solid black;
+            width: 500px;
+            min-height: 150px;
+            padding: 20px;
+        }
+
+        input {
+            width: 200px;
+            height: 20px;
+            border: none;
+            border-bottom: 1px dashed grey;
+
+        }
+
+        input.btn-submit {
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 7px;
+            cursor: pointer;
+            width: 100px;
+
+        }
+
+        input.btn-submit:hover {
+            background-color: orange;
+            color: black;
+
+
+
+        }
+
+        label {
+            margin-right: 30px;
+            width: 140px;
+            display: flex;
+            text-align: right;
+        }
+
+        p {
+            display: flex;
+        }
+
+        p.centrage {
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <p><label>Votre identifiant : </label> <input ar type="text" value="" name="nom"
+                placeholder="Ecrivez votre nom"></p>
+        <p><label>Votre mot de passe : </label><input type="password" value="" name="prenom"></p>
+        <p class="centrage"><input type="submit" class="btn-submit"> </p>
+    </form>
+</body>
+</html>

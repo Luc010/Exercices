@@ -1,0 +1,28 @@
+
+footer{
+	height: 30px;
+	width:960px; 
+}
+
+
+footer p{
+	margin: 0;
+	height:30px;
+	text-align: right;
+	color: blue;
+	
+	line-height: 30px;
+	vertical-align: middle;
+	
+}
+
+footer p a{
+	color: white;
+	text-decoration : none;
+	font-size: 80%;
+	font-family: arial, sans-serif;
+}
+footer p a:hover{
+	color: yellow;
+	text-decoration : underline;
+}

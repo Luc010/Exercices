@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+/*    GENERAL     */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    background-color: #fafafa;
+    font-family: 'Oswald', corbel, calibri, sans-serif;
+    user-select: none;
+}
+h1, h2{
+    text-indent: 10px;
+    margin: 0;
+}
+h2{
+    padding: 16px;
+    width: 100%;
+    background-color: #323232;
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: #323232;
+}
+.smSize{
+    font-size: 10px;
+}
+p{
+    text-indent: 10px;
+}
+.right{
+    text-align: right;
+}
+ul, li {
+    list-style: none;
+    cursor: pointer;
+    padding: 0;
+}
+ul{
+    display: flex;
+}
+.m-foot{
+    text-indent: 10px;
+}
+.square{
+    width: 300px;
+    height: 300px;
+    box-shadow: 10px 5px 5px  #ccc;
+}
+/*  -----------------   */
+/*    ELEMENTS FLEX     */
+.container{
+    margin-right: auto;
+    margin-left: auto;
+}
+.row{
+    display: flex;
+    flex-flow: wrap row;
+}
+.col{
+    padding-right: 15px;
+    padding-left: 15px
+}
+/*  -----------------   */
+/*        BARRE DE NAVIGATION     */
+.alignV{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 50px;
+}
+nav {
+    width: 100%;
+    margin: 20px 50px 0 50px;
+}
+.sticky{
+    position: sticky;
+    top: 0;
+}
+.navbar {
+    text-align: center;
+}
+.navlink {
+    width: 100%;
+    font-size: 18px;
+    background-color: #589482;
+    line-height: 48px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navlink:hover {
+    background-color: #323232;
+}
+
+.navlink > a {
+    color: white;
+}
+
+ul >.navlink {
+    border-bottom: solid 4px #ccc;
+}
+/*          -----------------         */
+main {
+    width: ;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    height: 72px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* FOOTER */
+footer{
+    height: 72px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ----------------- */
+/* BODY */
+.bg{
+    background-color: #f2f2f2;
+}
+.bkgd:first-of-type, .bkgd:last-of-type {
+    box-shadow: none;
+}
+.bkgd:nth-child(2){
+    box-shadow: -10px 0 0 0 
+    #f9f4f4;
+}
+.bkgd2{
+    background-color: #f2f2f2;  
+}
